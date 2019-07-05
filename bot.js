@@ -60,7 +60,7 @@ client.on('message', message => {
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
- m.send(`${argresult}\n ${m}\n 
+ m.send(`${argresult}\n ${m}\n By Server : ${message.guild.name}`);
 })
  message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'all').size}\` : عدد الاعضاء المستلمين`); 
  message.delete(); 
